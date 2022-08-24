@@ -1,13 +1,38 @@
 import logo from './assets/logo.svg';
 import './App.scss';
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
+
 
 function App() {
+  // Create Ref element.
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["nudge", "poke", "annoy", "psst", "ping", "notify"], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 150,
+      backSpeed: 120,
+      backDelay: 500,
+      smartBackspace: false,
+      shuffle: true,
+      loop: true,
+      showCursor: false
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="tagline">
-          nudge your friends
+        <span ref={el}></span> your friends
         </h1>
         <div className="badges">
         <a href="https://apps.apple.com/us/">
