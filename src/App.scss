@@ -13,6 +13,18 @@
   color: $color5;
 }
 
+.badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  height: 8vh;
+  margin: 5px;
+  display: flex;
+}
+
 .App-header {
   background-color: $color4;
   min-height: 100vh;
