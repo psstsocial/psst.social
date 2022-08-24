@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["nudge", "poke", "annoy", "psst", "ping", "notify", "pester", "harass", "remind"], // Strings to display
+      strings: ["nudge", "poke", "annoy", "psst", "ping", "notify", "pester", "harass", "remind", "disglottle", "sklonk", "brimp"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 150,
