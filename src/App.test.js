@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders header', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Psst Social/i);
+  const headerElement = screen.getByText(/nudge your friends/i);
   expect(headerElement).toBeInTheDocument();
 });
